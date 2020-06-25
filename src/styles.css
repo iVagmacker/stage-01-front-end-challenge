@@ -6,34 +6,174 @@
 
 body {
   font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #7159c1;
 }
 
-div {
-  width: 100%;
-  margin: 20px;
-}
-
-div li {
+.board {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  flex-wrap: wrap;
 }
 
-div li + li {
-  margin-top: 15px;
+.boardTitle {
+  display: flex;
+  flex-direction: column;
 }
 
-button {
+.boardTitle > p {
+  color: #f1efff;
+  font-size: 30px;
+  margin: 5px;
+}
+
+.boardTitle > button {
+  width: 100%;
+  background: #000;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.cards {
+  background-color: #fff;
+  max-width: 800px;
+  width: 800px;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  height: auto;
+  min-height: 100px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px #ccc solid;
+  box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card .title > p {
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card .title > div {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 5px;
   background: #7159c1;
   color: #fff;
-  border: 0;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bolder;
 }
 
-div li button {
-  margin: 0 15px;
-  background: #ca4949;
+.card .title > div > p {
+  padding: 2px 0;
+}
+
+.card .link {
+  color: #000;
+  padding: 5px;
+}
+
+.card .link > span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card .link > a {
+  color: #000;
+}
+
+.techs {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.techs > div {
+  padding: 5px;
+  background-color: #04d361;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttonLike {
+  width: 100%;
+  background: blueviolet;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonTrash {
+  width: 100%;
+  background: red;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonLike:hover {
+  background: blueviolet;
+}
+
+.buttonTrash:hover {
+  background: red;
 }
